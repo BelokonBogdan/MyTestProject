@@ -1,0 +1,2 @@
+selenium==7.1.3
+pytest==4.4.3
