@@ -21,6 +21,14 @@ class TestStartPage:
         return ''.join(random.choice(string.ascii_letters) for _ in range(length))
 
     def test_incorrect_login(self):
+        """
+        - Create driver
+        - Open page
+        - Enter fake login
+        - Enter fake password
+        - Click button
+        - Verify error
+        """
         driver = webdriver.Chrome("/Users/bogdan/PycharmProjects/MyTestProject/chromedriver")
 
         driver.get("https://qa-complex-app-for-testing.herokuapp.com/")
@@ -75,7 +83,15 @@ class TestStartPage:
 
         driver.close()
 
-    def test_symbols_asc2(self):
+    def test_symbols_ascii(self):
+        """
+        - Create driver
+        - Open page
+        - Enter fake-ascii login
+        - Enter fake password with ascii
+        - Click button
+        - Verify error
+        """
         driver = webdriver.Chrome("/Users/bogdan/PycharmProjects/MyTestProject/chromedriver")
 
         driver.get("https://qa-complex-app-for-testing.herokuapp.com/")
@@ -99,6 +115,14 @@ class TestStartPage:
         driver.close()
 
     def test_valid_login(self):
+        """
+        - Create driver
+        - Open page
+        - Enter valid login
+        - Enter valid password
+        - Click button
+        - Verify login is successful
+        """
         driver = webdriver.Chrome("/Users/bogdan/PycharmProjects/MyTestProject/chromedriver")
 
         driver.get("https://qa-complex-app-for-testing.herokuapp.com/")
@@ -123,6 +147,15 @@ class TestStartPage:
         driver.close()
 
     def test_valid_registration(self):
+        """
+        - Create driver
+        - Open page
+        - Enter new login
+        - Enter new email
+        - Enter new password
+        - Click button
+        - Verify registration is successful
+        """
         driver = webdriver.Chrome("/Users/bogdan/PycharmProjects/MyTestProject/chromedriver")
 
         driver.get("https://qa-complex-app-for-testing.herokuapp.com/")
